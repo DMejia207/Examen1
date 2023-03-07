@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Examen1.Views.PageNumGuardados">
+
+    <ContentPage.Content>
+        <StackLayout>
+
+            <CollectionView x:Name="Lista"
+                            Margin=" 15"
+                            SelectionMode="Single"
+                            >
+
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Vertical" ItemSpacing="10"/>
+                </CollectionView.ItemsLayout>
+
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout>
+                            <Label Text="{Binding id}" />
+
+                            <Label Text="{Binding nombres}" />
+
+                            <Label Text="{Binding apellidos}" />
+
+                            <Label Text="{Binding phone}" />
+
+
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+
+            </CollectionView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

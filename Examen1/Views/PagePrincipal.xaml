@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Examen1.Views.PagePrincipal">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame BackgroundColor="Blue" Padding="20" CornerRadius="0">
+                <Label Text="Contactos" HorizontalTextAlignment="Center" TextColor="White" FontSize="40"/>
+
+            </Frame>
+
+            <Entry x:Name="txtnombre" 
+                   Placeholder="Nombres" 
+                   Keyboard="Text"                  
+                   Margin="20,20,20,0"/>
+
+        <Entry x:Name="txtapellidos" Placeholder="Apellidos" Keyboard="Text" 
+                   Margin="20,20,20,0"/>
+
+        <Entry x:Name="txtphone" Placeholder="Telefono" Keyboard="Numeric" 
+                   Margin="20,20,20,0"/>
+
+            <Picker Title="Seleccione Edad"  Margin="20,20,20,0" x:Name="cbedad">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>13 o Menor</x:String>
+                    <x:String>14</x:String>
+                    <x:String>15</x:String>
+                    <x:String>16</x:String>
+                    <x:String>17</x:String>
+                    <x:String>18</x:String>
+                    <x:String>19</x:String>
+                    <x:String>20</x:String>
+                    <x:String>21</x:String>
+                    <x:String>22</x:String>
+                    <x:String>23</x:String>
+                    <x:String>24</x:String>
+                    <x:String>25</x:String>
+                    <x:String>26 o Mayor</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+            <Picker Title="Seleccione un Pais"  Margin="20,20,20,0" x:Name="cbpais">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Honduras</x:String>
+                        <x:String>Costa Rica</x:String>
+                        <x:String>Guatemala</x:String>
+                        <x:String>El Salvador</x:String>
+                        <x:String>Estados Unidos</x:String>
+                        <x:String>Mexico</x:String>
+                        <x:String>Colombia</x:String>
+                        <x:String>Otro</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+
+        <Entry x:Name="txtnota" Placeholder="Nota" Keyboard="Text"
+                   Margin="20,20,20,0"/>
+
+        <Button x:Name="btnguardar" Text="Guardar" Clicked="btnguardar_Clicked"                  
+                    Margin="30,30,30,0"
+                    BackgroundColor="Green"/>
+        
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

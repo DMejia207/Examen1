@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Examen1.Views.PageCargInfo">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text=" Mostrar Numeros "
+                     Clicked="ToolbarItem_Clicked"/>
+
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Frame BackgroundColor="Green" Padding="20" CornerRadius="0">
+                <Label Text="Numero Ingresado" HorizontalTextAlignment="Center" TextColor="White" FontSize="30"/>
+                              
+            </Frame>
+            
+            <Label Text="Su Ubicacion Actual es:"
+                VerticalOptions="Start" 
+                HorizontalOptions="Start" 
+                FontSize="20"/>
+
+            <Entry x:Name="txtlatitud" Placeholder="Latitud" Keyboard="Text" 
+                   Margin="20,20,20,0"  IsEnabled="false"/>
+
+            <Entry x:Name="txtlongitud" Placeholder="Longitud" Keyboard="Text" 
+                   Margin="20,20,20,0"  IsEnabled="false"/>
+
+
+            <Label Text="Los Datos Ingresados son los siguientes:"
+                VerticalOptions="Start" 
+                HorizontalTextAlignment="Start"
+                FontSize="20"
+                HorizontalOptions="Start" />
+            
+            <Label Text="Nombre:"
+                VerticalOptions="Start" 
+                TextColor="Black"
+                HorizontalOptions="Start" 
+                FontSize="20"/>
+
+            <Label Text="{Binding nombres}"
+                VerticalOptions="Start" 
+                HorizontalTextAlignment="Start"
+                FontSize="20"
+                HorizontalOptions="Start" />
+
+
+            <Label Text="Apellido:"
+                VerticalOptions="Start" 
+                TextColor="Black"
+                HorizontalOptions="Start" 
+                FontSize="20"/>
+            <Label Text="{Binding apellidos}"
+                VerticalOptions="Start" 
+                HorizontalTextAlignment="Start"
+                FontSize="20"
+                HorizontalOptions="Start" />
+
+
+
+            <Label Text="Telefono:"
+                VerticalOptions="Start" 
+                TextColor="Black"
+                HorizontalOptions="Start" 
+                FontSize="20"/>
+
+            <Label Text="{Binding phone}"
+                VerticalOptions="Start" 
+                HorizontalTextAlignment="Start"
+                FontSize="20"
+                HorizontalOptions="Start" />
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
